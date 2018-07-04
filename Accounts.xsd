@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:P="password" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="Password" />
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+      password Managament System 
+    </xs:documentation>
+  </xs:annotation>
+  
+  <!--password Precentage-->
+  <xs:simpleType name="precent">
+    <xs:restriction base="xs:unsignedByte">
+      <xs:minInclusive value="0"/>
+      <xs:maxExclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+<!--password"Strength" -->
+  <xs:simpleType name="strength">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Very Weak"/>
+      <xs:enumeration value="Weak"/>
+      <xs:enumeration value="Good"/>
+      <xs:enumeration value="Strong"/>
+      <xs:enumeration value="Very Strong"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+
+  
+  <!-- Remove White Space -->
+  <xs:simpleType name="whitespace">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\S*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  
+  <!--Root the start of the xml -->
+  <xs:element name="username">
+    <!--Parent root start " Username "  -->
+    <xs:complexType>
+      <xs:sequence>
+        <!-- child element of "Username" start  -->
+        <xs:element name="accounts"  >
+          <xs:complexType>
+            <xs:sequence>
+              <!--Child element of "accounts" start -->
+              <xs:element name="account"  maxOccurs="unbounded">
+                <xs:complexType>
+                  <!--Child element of "account" start-->
+                  <xs:sequence>
+                    <xs:element name="description" maxOccurs="1" minOccurs="1" type="xs:string" />
+                    <xs:element name="account-Number" maxOccurs="1" minOccurs="1" type="xs:string" />
+                    <xs:element name="password-Date" type="xs:date" />
+                    <xs:element name="password-Strength"  >
+                      <xs:simpleType >
+                        
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="very weak"/>
+                          <xs:enumeration value="weak"/>
+                          <xs:enumeration value="good"/>
+                          <xs:enumeration value="strong"/>
+                          <xs:enumeration value="very strong"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="password-percentage"  >
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="0"/>
+                          
+                          <xs:maxInclusive value="100"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                   
+                    <xs:element name="Login-urI" type="xs:string" minOccurs="0" maxOccurs="1" />
+                  </xs:sequence>
+                  <!--Child element of "account" Ends -->
+                  <!--Attribute of "account" start -->
+                  <xs:attribute name="UserId" type="whitespace" use="required" />
+                  <xs:attribute name="password" type="whitespace" use="required"  />
+              <!--Attribute of "account" End -->
+                </xs:complexType>
+                
+              </xs:element>  <!--End Of "account" Element -->
+            </xs:sequence>
+          </xs:complexType>
+          
+        </xs:element>  <!--End Of "account" Element -->
+      </xs:sequence>
+      <!--Attribute for "Username" -->
+      <xs:attribute name="name" type="xs:string" use="required" />
+    </xs:complexType>
+    <!--Parent root End " Username "  -->
+  </xs:element>
+  <!--End og the xml -->
+</xs:schema>

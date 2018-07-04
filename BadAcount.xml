@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<username name ="Kobe"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Accounts.xsd" >
+
+  <accounts>
+    <!--A string without embedded spaces "Password"  and the other one "userId"  with  other whitespace characters-->
+    <account UserId=" " password="Abc 1234?">
+      <description>Fanshawe Online Login </description>
+      <account-Number >456789</account-Number>
+      <!--date fromat is not the same should be 2008-10-29 -->
+      <password-Date>2008/10/29</password-Date>
+      <!--Not one of the choices -->
+      <password-Strength >Vry eak</password-Strength>
+      <!--less than 0 or Greater than 100 Dont work-->
+      <password-percentage>-25</password-percentage>
+      <!--More than one Login-Url-->
+      <Login-urI>http://www.fanshaweonline.ca</Login-urI>
+      <Login-urI>http://www.fanshaweonline.ca</Login-urI>
+    </account>
+
+  </accounts>
+</username>

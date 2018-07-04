@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<username name="Kobe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Accounts.xsd">
+  <accounts>
+    <account UserId="K_booke@fanshaweonline.ca" password="Abc1234?">
+      <description>Fanshawe Online Login </description>
+      <account-Number>456789</account-Number>
+      <password-Date>2008-01-10</password-Date>
+      <password-Strength>weak</password-Strength>
+      <password-percentage> 25</password-percentage>
+      <Login-urI>https://www.fanshaweonline.ca</Login-urI>
+    </account>
+    <account UserId="K_booke@gmail.ca" password="Abc1234?">
+      <description>Visual Studio </description>
+      <account-Number>86152</account-Number>
+      <password-Date>2014-01-23</password-Date>
+      <password-Strength>strong</password-Strength>
+      <password-percentage>98</password-percentage>
+      <Login-urI>https://www.visualStudio.ca</Login-urI>
+    </account>
+    <account UserId="cav@gmail.ca" password="Abc1234?">
+      <description>NBA Login</description>
+      <account-Number>66457</account-Number>
+      <password-Date>2018-12-02</password-Date>
+      <password-Strength>strong</password-Strength>
+      <password-percentage>45</password-percentage>
+      <Login-urI>https://www.nba.ca</Login-urI>
+    </account>
+    <account UserId="baller@gmail.ca" password="Abc1234?">
+      <description>Slam Magazine </description>
+      <account-Number>66457</account-Number>
+      <password-Date>2018-08-02</password-Date>
+      <password-Strength>strong</password-Strength>
+      <password-percentage>45</password-percentage>
+      <Login-urI>https://www.SlamOnline.ca</Login-urI>
+    </account>
+    <account UserId="bobjohn@gmail.ca" password="Abc1234?">
+      <description>Billing Co.</description>
+      <account-Number>66457</account-Number>
+      <password-Date>2018-12-02</password-Date>
+      <password-Strength>strong</password-Strength>
+      <password-percentage>45</password-percentage>
+      <Login-urI>https://www.BillingCo.ca</Login-urI>
+    </account>
+    <account UserId="dfa" password="dsfad">
+      <description>dhbfaewu</description>
+      <account-Number>aad</account-Number>
+      <password-Date>2018-05-29</password-Date>
+      <password-Strength>very weak</password-Strength>
+      <password-percentage>16</password-percentage>
+      <Login-urI>dhbfaewu</Login-urI>
+    </account>
+    <account UserId="sddcs" password="scvdf">
+      <description>dsd</description>
+      <account-Number>dfvfd</account-Number>
+      <password-Date>2018-05-29</password-Date>
+      <password-Strength>very weak</password-Strength>
+      <password-percentage>17</password-percentage>
+      <Login-urI>dsd</Login-urI>
+    </account>
+  </accounts>
+</username>
